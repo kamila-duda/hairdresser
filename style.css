@@ -1,0 +1,423 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body,
+html {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  height: 100%;
+  font-family: "Vollkorn", Serif;
+}
+
+.container, .about__container, .offer__container, .contact__container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+}
+
+.home {
+  position: relative;
+  height: calc(100vh - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px;
+  background-color: #ce89b9;
+}
+
+.home__intro {
+  max-width: 600px;
+  height: 400px;
+  margin: 10px;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home__title {
+  margin: 0;
+  font-family: "Vollkorn", Serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  position: relative;
+  text-transform: uppercase;
+  color: #000000;
+  z-index: 2;
+}
+
+.home__title::before {
+  content: 'Loki-koki';
+  position: absolute;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  bottom: 20px;
+  font-family: "Herr Von Muellerhoff", cursive;
+  font-size: 60px;
+  text-transform: capitalize;
+  width: 100%;
+  color: #ffffff;
+  z-index: -1;
+}
+
+.home__moreInfo {
+  padding: 18px 24px 18px 24px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #ffffff;
+  margin-top: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.home__moreInfo:hover {
+  background-color: #bf65a4;
+}
+
+.home__image {
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 20px 20px #ffffff;
+          box-shadow: 20px 20px #ffffff;
+  outline-offset: 30px;
+  outline: 1px solid #000000;
+}
+
+.social__links {
+  list-style-type: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__links--contact {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social__link {
+  text-decoration: none;
+}
+
+.social__linkIcon {
+  font-size: 40px;
+  padding: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #ffffff;
+}
+
+.social__linkIcon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.social__linkIcon--dark {
+  font-size: 40px;
+  padding: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #ce89b9;
+}
+
+.navigation {
+  height: 50px;
+  padding: 12px 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 5px 8px 2px #333333;
+          box-shadow: 5px 5px 8px 2px #333333;
+  z-index: 3;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navigation__listItem {
+  text-decoration: none;
+  color: #ce89b9;
+}
+
+.navigation__listItem:hover {
+  border-bottom: 2px solid #ce89b9;
+}
+
+.section__title, .section__title--darkFont {
+  position: relative;
+  text-align: center;
+  margin: 0 0 40px 0;
+  padding: 60px 0 0;
+  font-family: "Vollkorn", Serif;
+}
+
+.section__title:after, .section__title--darkFont:after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #ce89b9;
+  left: 50%;
+  bottom: -16px;
+  margin-left: -25px;
+}
+
+.section__intro {
+  text-align: justify;
+}
+
+.section__intro::first-letter {
+  font-size: 90px;
+  font-family: serif;
+  float: left;
+  color: #ce89b9;
+  line-height: 0.4;
+}
+
+.about {
+  background-color: #000000;
+  padding: 20px;
+}
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__image {
+  width: 300px;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 20px 20px #ffffff;
+          box-shadow: 20px 20px #ffffff;
+  outline-offset: 30px;
+  outline: 1px solid #ce89b9;
+}
+
+.aboutMe {
+  max-width: 400px;
+}
+
+.news {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.news__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.news__tile {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  text-align: center;
+  margin: 24px 0 0 0;
+}
+
+.news__image {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 5px 5px #ce89b9;
+          box-shadow: 5px 5px #ce89b9;
+  outline-offset: 10px;
+  outline: 1px solid #000000;
+}
+
+.news__title {
+  margin: 24px 0 0 0;
+}
+
+.news__description {
+  margin: 24px 0 0 0;
+  padding: 0 24px;
+}
+
+.offer {
+  background-color: #ce89b9;
+  padding: 50px;
+}
+
+.offer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offer__content {
+  max-width: 500px;
+}
+
+.offer__image {
+  width: 250px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 20px 20px #000000;
+          box-shadow: 20px 20px #000000;
+  outline-offset: 30px;
+  outline: 1px solid #000000;
+}
+
+.section__intro--offer {
+  text-align: justify;
+}
+
+.section__title--dark:after {
+  background: #000000;
+}
+
+.section__title--darkFont {
+  color: #000000;
+}
+
+.gallery__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 72px 0 0 0;
+}
+
+.gallery__item {
+  position: relative;
+  margin: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery__item:before {
+  position: absolute;
+  display: none;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.gallery__figcaption {
+  position: absolute;
+  display: none;
+  width: 50%;
+  left: 25%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.gallery__item:hover:before,
+.gallery__item:hover .gallery__figcaption {
+  display: block;
+}
+
+.contact {
+  text-align: center;
+  color: #000000;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #000000;
+}
+
+.test {
+  background-image: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.568189316098!2d19.091929315744824!3d50.820638679528095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b67cf1c7b997%3A0xcdcda6c20e5c0e21!2sIgnacego%20Mo%C5%9Bcickiego%2C%2042-202%20Cz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1599246007955!5m2!1spl!2spl"');
+}
+/*# sourceMappingURL=style.css.map */

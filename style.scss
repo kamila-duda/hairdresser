@@ -1,0 +1,318 @@
+$color-main: #ce89b9;
+$color-background: #60a3bc;
+$color-text-first: #ffffff;
+$color-text-second: #000000;
+$font-first: 'Vollkorn', Serif;
+$font-second: 'Herr Von Muellerhoff', cursive;
+$transition: all 0.5s;
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  box-shadow: none;
+}
+
+body,
+html {
+  color: $color-text-first;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  height: 100%;
+  font-family: $font-first;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+}
+.home {
+  position: relative;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 24px;
+  background-color: $color-main;
+}
+.home__intro {
+  max-width: 600px;
+  height: 400px;
+  margin: 10px;
+  color: $color-text-first;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home__title {
+  margin: 0;
+  font-family: $font-first;
+  font-size: 40px;
+  letter-spacing: 5px;
+  position: relative;
+  text-transform: uppercase;
+  color: $color-text-second;
+  z-index: 2;
+}
+.home__title::before {
+  content: 'Loki-koki';
+  position: absolute;
+  transform: rotate(-5deg);
+  bottom: 20px;
+  font-family: $font-second;
+  font-size: 60px;
+  text-transform: capitalize;
+  width: 100%;
+  color: $color-text-first;
+  z-index: -1;
+}
+.home__moreInfo {
+  padding: 18px 24px 18px 24px;
+  color: $color-text-first;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid $color-text-first;
+  margin-top: 20px;
+  transition: $transition;
+}
+.home__moreInfo:hover {
+  background-color: darken($color-main, 10%);
+}
+.home__image {
+  width: 300px;
+  object-fit: cover;
+  box-shadow: 20px 20px $color-text-first;
+  outline-offset: 30px;
+  outline: 1px solid $color-text-second;
+}
+.social__links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.social__links--contact{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social__link {
+  text-decoration: none;
+}
+.social__linkIcon {
+  font-size: 40px;
+  padding: 20px;
+  transition: $transition;
+  color: $color-text-first;
+}
+.social__linkIcon:hover {
+  transform: scale(1.2);
+  transition: $transition;
+}
+.social__linkIcon--dark {
+    font-size: 40px;
+    padding: 20px;
+    transition: $transition;
+    color: $color-main;
+  }
+.navigation {
+  height: 50px;
+  padding: 12px 0;
+  background-color: $color-text-first;
+  box-shadow: 5px 5px 8px 2px lighten($color-text-second, 20%);
+  z-index: 3;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.navigation__listItem {
+  text-decoration: none;
+  color: $color-main;
+}
+.navigation__listItem:hover {
+  border-bottom: 2px solid $color-main;
+}
+.section__title {
+  position: relative;
+  text-align: center;
+  margin: 0 0 40px 0;
+  padding: 60px 0 0;
+  font-family: $font-first;
+}
+.section__title:after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: $color-main;
+  left: 50%;
+  bottom: -16px;
+  margin-left: -25px;
+}
+
+.section__intro {
+  text-align: justify;
+}
+.section__intro::first-letter {
+  font-size: 90px;
+  font-family: serif;
+  float: left;
+  color: $color-main;
+  line-height: 0.4;
+}
+.about {
+  background-color: $color-text-second;
+  padding: 20px;
+}
+.about__container {
+  @extend .container;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about__image {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  box-shadow: 20px 20px $color-text-first;
+  outline-offset: 30px;
+  outline: 1px solid $color-main;
+}
+.aboutMe {
+  max-width: 400px;
+}
+.news {
+  background-color: $color-text-first;
+  color: $color-text-second;
+}
+.news__wrapper {
+  display: flex;
+  padding-bottom: 20px;
+}
+.news__tile {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  text-align: center;
+  margin: 24px 0 0 0;
+}
+.news__image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 5px 5px $color-main;
+  outline-offset: 10px;
+  outline: 1px solid $color-text-second;
+}
+.news__title {
+  margin: 24px 0 0 0;
+}
+.news__description {
+  margin: 24px 0 0 0;
+  padding: 0 24px;
+}
+.offer {
+  background-color: $color-main;
+  padding: 50px;
+}
+.offer__container{
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+}
+.offer__content{
+    max-width: 500px;
+}
+.offer__image{
+    width: 250px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 20px 20px $color-text-second;
+  outline-offset: 30px;
+  outline: 1px solid $color-text-second;
+}
+.section__intro--offer {
+  text-align: justify;
+}
+.section__title--dark:after {
+  background: $color-text-second;
+}
+.section__title--darkFont{
+    @extend .section__title;
+    color: $color-text-second;
+}
+.gallery__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 72px 0 0 0;
+}
+.gallery__item {
+  position: relative;
+  margin: 0;
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__item:before {
+  position: absolute;
+  display: none;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+.gallery__figcaption {
+  position: absolute;
+  display: none;
+  width: 50%;
+  left: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  border: 1px solid $color-text-first;
+  cursor: pointer;
+}
+.gallery__item:hover:before,
+.gallery__item:hover .gallery__figcaption {
+  display: block;
+}
+.contact {
+  text-align: center;
+  color: $color-text-second;
+}
+.contact__container {
+    @extend .container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+.footer {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  background-color: $color-text-second;
+}
+.test{
+    background-image: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.568189316098!2d19.091929315744824!3d50.820638679528095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b67cf1c7b997%3A0xcdcda6c20e5c0e21!2sIgnacego%20Mo%C5%9Bcickiego%2C%2042-202%20Cz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1599246007955!5m2!1spl!2spl"');
+}
