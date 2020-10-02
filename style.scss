@@ -2,8 +2,8 @@ $color-main: #ce89b9;
 $color-background: #60a3bc;
 $color-text-first: #ffffff;
 $color-text-second: #000000;
-$font-first: 'Vollkorn', Serif;
-$font-second: 'Herr Von Muellerhoff', cursive;
+$font-first: "Vollkorn", Serif;
+$font-second: "Herr Von Muellerhoff", cursive;
 $transition: all 0.5s;
 
 * {
@@ -31,14 +31,19 @@ html {
 .mobileMenu__button {
   width: 30px;
   height: 30px;
-  border: 2px solid $decor-color;
+  margin-top: 10px;
+  border: 2px solid $color-text-second;
   border-radius: 5px;
   justify-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: flex-start;
   cursor: pointer;
+  @media (min-width: 992px) {
+      display: none;
+  }
 }
 .mobileMenu__button--open .mobileMenu__burger {
   transform: translateX(-30px);
@@ -53,17 +58,17 @@ html {
 .mobileMenu__burger {
   width: 20px;
   height: 3px;
-  background-color: $decor-color;
+  background-color: $color-text-second;
   position: relative;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
 .mobileMenu__burger--pseudoElement {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
-  background-color: $decor-color;
+  background-color: $color-text-second;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -75,22 +80,18 @@ html {
   @extend .mobileMenu__burger--pseudoElement;
   transform: translateY(7px);
 }
-@media (min-width: 992px) {
-  .mobileMenu__button {
-    display: none;
-  }
-}
 .mobileMenu {
   position: fixed;
   left: 0;
-  top: 80px;
+  top: 0;
   right: 0;
   bottom: 0;
-  background-color: $dark-color;
+  background-color: $color-text-second;
   display: none;
 }
 .mobileMenu--open {
   display: unset;
+  z-index: 10;
 }
 .mobileMenu__list {
   align-items: center;
@@ -107,16 +108,16 @@ html {
   display: flex;
   width: 100%;
   flex-grow: 1;
-  border-top: 1px solid $decor-color;
+  border-top: 1px solid $color-main;
   align-items: center;
   justify-content: center;
 }
 .mobileMenu__listItem:hover {
-  background-color: $decor-color;
+  background-color: $color-main;
 }
 .mobileMenu__listLink {
   text-decoration: none;
-  color: $light-color;
+  color: $color-background;
 }
 .home {
   position: relative;
@@ -126,9 +127,9 @@ html {
   align-items: center;
   padding: 0 24px;
   background-color: $color-main;
-  @media(max-width:900px){
+  @media (max-width: 900px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 .home__intro {
@@ -142,8 +143,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media(max-width:900px){
-   height: 300px; 
+  @media (max-width: 900px) {
+    height: 300px;
   }
 }
 .home__title {
@@ -157,7 +158,7 @@ html {
   z-index: 2;
 }
 .home__title::before {
-  content: 'Loki-koki';
+  content: "Loki-koki";
   position: absolute;
   transform: rotate(-5deg);
   bottom: 20px;
@@ -167,7 +168,7 @@ html {
   width: 100%;
   color: $color-text-first;
   z-index: -1;
-  @media(max-width:900px){
+  @media (max-width: 900px) {
     left: -10px;
   }
 }
@@ -179,7 +180,7 @@ html {
   border: 2px solid $color-text-first;
   margin-top: 20px;
   transition: $transition;
-  @media(max-width:900px){
+  @media (max-width: 900px) {
     display: none;
   }
 }
@@ -192,8 +193,8 @@ html {
   box-shadow: 20px 20px $color-text-first;
   outline-offset: 30px;
   outline: 1px solid $color-text-second;
-  @media(max-width:900px){
-    margin-bottom: 30px;
+  @media (max-width: 900px) {
+    margin-bottom: 50px;
     height: 270px;
     width: 200px;
   }
@@ -203,10 +204,10 @@ html {
   padding: 0;
   display: flex;
 }
-.social__links--contact{
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+.social__links--contact {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 .social__link {
   text-decoration: none;
@@ -222,17 +223,20 @@ html {
   transition: $transition;
 }
 .social__linkIcon--dark {
-    font-size: 40px;
-    padding: 20px;
-    transition: $transition;
-    color: $color-main;
-  }
+  font-size: 40px;
+  padding: 20px;
+  transition: $transition;
+  color: $color-main;
+}
 .navigation {
   height: 50px;
   padding: 12px 0;
   background-color: $color-text-first;
   box-shadow: 5px 5px 8px 2px lighten($color-text-second, 20%);
   z-index: 3;
+  @media (max-width: 992px) {
+      display: none;
+  }
 }
 .sticky {
   position: fixed;
@@ -262,7 +266,7 @@ html {
 }
 .section__title:after {
   position: absolute;
-  content: '';
+  content: "";
   width: 50px;
   height: 5px;
   background: $color-main;
@@ -299,15 +303,16 @@ html {
   box-shadow: 20px 20px $color-text-first;
   outline-offset: 30px;
   outline: 1px solid $color-main;
-@media(max-width:900px){
-  height: 220px;
-  width: 200px;
-  margin-top: 30px;
-  object-fit: cover;
-  box-shadow: 20px 20px $color-text-first;
-  outline-offset: 30px;
-  outline: 1px solid $color-main;
-}}
+  @media (max-width: 900px) {
+    height: 220px;
+    width: 200px;
+    margin-top: 30px;
+    object-fit: cover;
+    box-shadow: 20px 20px $color-text-first;
+    outline-offset: 30px;
+    outline: 1px solid $color-main;
+  }
+}
 .aboutMe {
   max-width: 400px;
 }
@@ -318,7 +323,7 @@ html {
 .news__wrapper {
   display: flex;
   padding-bottom: 20px;
-  @media(max-width:900px){
+  @media (max-width: 900px) {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -347,26 +352,26 @@ html {
   background-color: $color-main;
   padding: 50px;
 }
-.offer__container{
-    @extend .container;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @media(max-width:900px){
-      justify-content: center;
-    }
+.offer__container {
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 }
-.offer__content{
-    max-width: 500px;
+.offer__content {
+  max-width: 500px;
 }
-.offer__image{
-    width: 250px;
+.offer__image {
+  width: 250px;
   height: 400px;
   object-fit: cover;
   box-shadow: 20px 20px $color-text-second;
   outline-offset: 30px;
   outline: 1px solid $color-text-second;
-@media(max-width:900px){
+  @media (max-width: 900px) {
     display: none;
   }
 }
@@ -376,9 +381,9 @@ html {
 .section__title--dark:after {
   background: $color-text-second;
 }
-.section__title--darkFont{
-    @extend .section__title;
-    color: $color-text-second;
+.section__title--darkFont {
+  @extend .section__title;
+  color: $color-text-second;
 }
 .gallery__wrapper {
   display: flex;
@@ -401,7 +406,7 @@ html {
 .gallery__item:before {
   position: absolute;
   display: none;
-  content: '';
+  content: "";
   left: 0;
   top: 0;
   width: 100%;
@@ -429,17 +434,22 @@ html {
   color: $color-text-second;
 }
 .contact__container {
-    @extend .container;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-.footer {
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-  background-color: $color-text-second;
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.test{
-    background-image: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.568189316098!2d19.091929315744824!3d50.820638679528095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b67cf1c7b997%3A0xcdcda6c20e5c0e21!2sIgnacego%20Mo%C5%9Bcickiego%2C%2042-202%20Cz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1599246007955!5m2!1spl!2spl"');
+.footer {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $color-text-second;
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+}
+.test {
+  background-image: url('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.568189316098!2d19.091929315744824!3d50.820638679528095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b67cf1c7b997%3A0xcdcda6c20e5c0e21!2sIgnacego%20Mo%C5%9Bcickiego%2C%2042-202%20Cz%C4%99stochowa!5e0!3m2!1spl!2spl!4v1599246007955!5m2!1spl!2spl"');
 }
