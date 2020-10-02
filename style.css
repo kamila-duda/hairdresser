@@ -25,10 +25,14 @@ html {
 }
 
 .mobileMenu__button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
   width: 30px;
   height: 30px;
-  margin-top: 10px;
   border: 2px solid #000000;
+  background-color: #ce89b9;
+  z-index: 10;
   border-radius: 5px;
   justify-self: flex-start;
   display: -webkit-box;
