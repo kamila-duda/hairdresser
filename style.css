@@ -609,6 +609,12 @@ html {
   cursor: pointer;
 }
 
+@media (max-width: 700px) {
+  .gallery__figcaption {
+    font-size: 5px;
+  }
+}
+
 .gallery__item:hover:before,
 .gallery__item:hover .gallery__figcaption {
   display: block;

@@ -428,6 +428,9 @@ html {
   text-transform: uppercase;
   border: 1px solid $color-text-first;
   cursor: pointer;
+  @media(max-width: 700px){
+    font-size: 5px;
+  }
 }
 .gallery__item:hover:before,
 .gallery__item:hover .gallery__figcaption {
